@@ -1,0 +1,35 @@
+/* .div1 p, .div2 p {
+    color: aqua;
+} */
+
+/* #parg1 {
+    color: red;
+}
+
+.parg2 {
+    color: blue;
+}
+
+p {
+    color: aqua !important;
+} */
+
+
+/* ********************* */
+
+
+.div1 p{
+    color: aqua;
+}
+
+.div1 .nestedp {
+    color: red;
+}
+
+.distinctio {
+    color: red;
+}
+
+.tamim1 #tamim2 p {
+    color: chartreuse;
+}
