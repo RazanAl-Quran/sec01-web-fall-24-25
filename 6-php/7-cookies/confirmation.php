@@ -5,9 +5,9 @@ $id = $_POST['id'];
 
 // setcookie('username2',$username); // Cookie is deleted when the browser is closed
 
-setcookie('username2',$username,(86400 * 30)); // Cookie lasts 30 days
+setcookie('username2',$username,time() +(86400 * 30)); // Cookie lasts 30 days
 
-setcookie('id2',(86400 * 30)); // Cookie lasts 30 days
+setcookie('id2',$id,time() +(86400 * 30)); // Cookie lasts 30 days
 ?>
 
 <!DOCTYPE html>
