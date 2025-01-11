@@ -66,6 +66,7 @@ include 'connect.php';
                         <td>$name</td>
                         <td>$salary</td>
                         <td>
+                            <button  class='btn btn-primary'><a href='updateEmp.php?empID=$id'>Update</a></button>
                             <button  class='btn btn-danger'><a href='deleteEmp.php?empID=$id'>Delete</a></button>
                         </td>
                     </tr>";
