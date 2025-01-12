@@ -1,26 +1,32 @@
 <?php
 
 require 'connect.php';
-
 session_start();
 
 if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $sql = "SELECT * FROM users WHERE username='$username' AND password= '$password'; ";
-    $result = mysqli_query($conn, $sql);
-    print_r($result);
-    $empdetails = mysqli_fetch_assoc($result);
 
-    if ($empdetails) {
-        $_SESSION['user'] = $username;
+    $sql = "SELECT * FROM users WHERE username='$username' AND password='$password';";
+
+    $result = mysqli_query($conn, $sql);
+
+    $loggedInUser = mysqli_fetch_assoc($result);
+
+    print_r($loggedInUser);
+
+    if ($loggedInUser) {
+        $_SESSION['cakeUser'] = $username;
         header("Location: products.php");
+
     } else {
-        print_r("invalid username or password");
+        echo "invalid username or password";
     }
+
 }
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

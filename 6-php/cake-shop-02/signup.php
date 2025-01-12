@@ -1,10 +1,9 @@
 <?php
-require('connect.php');
+
+require 'connect.php';
 
 if (isset($_POST['register'])) {
-    print_r($_POST);
-
-    $username= $_POST['username'];
+    $username = $_POST['username'];
     $password = $_POST['password'];
 
     $sql = "INSERT INTO users (username,password) VALUES ('$username','$password');";
@@ -12,15 +11,16 @@ if (isset($_POST['register'])) {
     $result = mysqli_query($conn,$sql);
 
     if($result) {
-        echo "user has been added sucessfully";
-        // header('Location: signin.php');
+        header("Location: signin.php");
     } else {
         mysqli_error($conn);
     }
+
+
+
 }
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
